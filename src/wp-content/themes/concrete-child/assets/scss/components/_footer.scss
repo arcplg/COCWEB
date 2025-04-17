@@ -1,0 +1,20 @@
+#footer {
+    background-color: $color-footer !important;
+    color: $color-white !important;
+
+    .grid {
+        display: none;
+    }
+
+    .copyright {
+        padding-top: 10px;
+        padding-bottom: 6px;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+.sentry-bottom-nav {
+    z-index: 1;
+}

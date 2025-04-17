@@ -1,0 +1,455 @@
+.p-careers {
+  // font-family: 'Roboto', sans-serif;
+
+  .title {
+    @include fs(48, 46);
+    font-weight: bold;
+    text-align: left;
+
+    @include bp(tab) {
+      @include fs(30, 38);
+    }
+  }
+
+  &_banner {
+    position: relative;
+    width: 100%;
+    height: 784px;
+    margin-bottom: 155px;
+    
+    @include bp(tab) {
+      height: 500px;
+      margin-bottom: 100px;
+    }
+
+    @include bp(sp) {
+      margin-bottom: 60px;
+    }
+
+    a { 
+      display: block;
+      position: absolute;
+      z-index: 3;
+      background-image: url(../images/careers/down.svg);
+      background-repeat: no-repeat;
+      width: 100%;
+      left: calc(50% - 23px);
+      height: 24px;
+      bottom: 50px;
+      @include flexbox();
+      @include justify-content(center);
+    }
+
+    &_background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      background: url('../images/careers/bg-careers.jpg');
+      background-size: cover;
+      @include bp(tab) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        background: url('../images/careers/bg-careers_mobile.jpg');
+        background-size: cover;
+      }
+    }
+
+    &_text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include fs(96, 160);
+      font-weight: 200;
+      letter-spacing: 9px;
+      text-align: center;
+      color: $color-white;
+      z-index: 2;
+      
+      @include bp(tab) {
+        width: 100%;
+        height: 100%;
+        @include align-items(flex-end);
+        padding-bottom: 130px;
+        @include fs(60, 90);
+      }
+    }
+  }
+
+  &_description {
+    .mission {
+      @include fs(36, 56);
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 44px;
+
+      @include bp(sp) {
+        @include fs(28, 36);
+      }
+
+      p { 
+        strong {
+        background: #A6DD08;
+        color: #FFFFFF;
+        padding: 0 5px;
+        }
+      }
+    }
+
+    .concrete-corp {
+      max-width: 754px;
+      text-align: center;
+      @include fs(22, 46);
+      font-weight: 300;
+      margin: 0 auto;
+      font-family: 'Roboto', sans-serif;
+
+      @include bp(sp) {
+        @include fs(20, 36);
+      }
+    }  
+    
+    .p-career_jobs_wrapper {
+      margin-top: 155px;
+      padding: 121px 135px 80px 121px;
+      background-image: url('../images/careers/bg-gray.jpg');
+
+      @include bp(tab) {
+        padding: 70px 60px 70px 60px;
+        margin-top: 80px;
+      }
+
+      @include bp(sp) {
+        padding: 80px 20px 95px 20px;
+      }
+
+      .welcome {
+        @include fs(18, 46);
+        // font-family: 'Noto Sans', sans-serif;
+        font-family: "Noto Sans";
+        margin-bottom: 109px;
+
+        @include bp(sp) {
+          @include fs(16, 28);
+          margin: 20px 0 40px 0;
+        }
+      }
+
+      .job-list {
+        &_item {
+          border-top: 1px solid #C7C7C7;
+
+          .job-title-wrapper {
+            @include flexbox();
+            @include align-items(center);
+            cursor: pointer;
+
+            .job-title {
+              width: calc(100% - 60px);
+              @include fs(22, 26);
+              font-weight: bold;
+              padding: 78px 0;
+              color: #252525;
+            }
+
+            .expand-job {
+              display: block;
+              width: 60px;
+              height: 60px;
+              background-image: url("../images/careers/plus.png");
+              background-repeat: no-repeat;
+              cursor: pointer;
+            }
+          }
+          
+          &.active {
+            .expand-job {
+              background-image: url("../images/careers/minor.png");
+            }
+          }
+
+          .job-content-wrapper {
+            position: relative;
+            display: none;
+
+            hr {
+              border: 1px solid #C7C7C7;
+              margin: 27px 0;
+            }
+
+            .heading {
+              @include fs(16, 26);
+              color: #111111;
+              font-weight: bold;
+            }
+
+            &::before {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              content: '';
+              background-image: url('../images/careers/bg-jobList.png');
+            }
+
+            .job-content {
+              position: relative;
+              @include fs(16, 26);
+              font-family: 'Roboto' !important;
+              padding: 27px 40px 0 40px;
+
+              .salary {
+                font-weight: bold;
+
+                @include bp(sp) {
+                  @include fs(14, 20);
+                }
+              }
+
+              ul {
+                padding-left: 15px;
+                @include fs(16, 26);
+
+                li {
+                  list-style: disc;
+                }
+              } 
+
+              .applyBtn {
+                margin: 40px 0 53px 0;
+                padding: 20px 45px;
+                border: 3px solid #111111;
+                @include fs(16, 19);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bg-job-list {
+      width: 100%;
+      height: 922px;
+      background-image: url('../images/careers/bg-jobList.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      margin-top: -164px;
+
+      @include bp(tab) {
+        background-image: url('../images/careers/bg-jobList_mobile.jpg');
+        height: 337px;
+        margin-top: -25px;
+      }
+    }
+  }
+
+  &_join-us {
+    .join-us-wrapper {
+      @include flexbox();
+
+      @include bp(tab) {
+        @include flex-direction(column);
+      }
+      
+      .join-us_form {
+        width: 45%;
+
+        @include bp(tab) {
+          width: 100%;
+          margin-bottom: 40px;
+          order: 2;
+        }
+
+        .btn-submit_wrapper {
+          width: 220%;
+
+          @include bp(tab) {
+            @include flexbox();
+            @include flex-direction(column);
+            width: 100%;
+          }
+          span {
+            margin-left: 15px;
+
+            &.icon-loader {              
+              display: none;
+              background-image: url('../images/common/loading.gif');
+              width: 16px;
+              height: 16px;
+              border: none;
+              padding: 0;
+              margin: 10px 0 0 4px;
+            }
+
+            @include bp(tab) {
+              margin: 10px 0 0 0;
+            }
+          }
+        }
+
+        &_notice {
+          display: none;
+          border: 2px solid #398f14;
+          margin-top: 35px;
+          padding: 0.2em 1em;
+          text-align: center;
+
+          @include bp(tab) {
+            margin-top: 0;
+          }
+
+          &.error {
+            border: 2px solid #ffb900;
+          }
+        }
+
+        .title {
+          // font-family: 'Roboto', sans-serif;
+          margin-top: 150px;
+          margin-bottom: 21px;
+          font-weight: bold;
+          line-height: 60px;
+
+          @include bp(tab) {
+            margin-top: 0;
+          }
+        }
+
+        input {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #D9D9D9;
+          padding: 25px 15px 13px 15px;
+          color: #111;
+          font-family: 'Roboto', sans-serif;
+          @include fs(18, 21);
+          padding-left: 25px;
+          background-repeat: no-repeat;
+          background-position: center left;
+
+          &#candidate {
+            background-position: left bottom 17px;
+          }
+
+          &::placeholder {
+            color: #111;
+          }
+        }
+
+        .file-wrapper {
+          position: relative;
+          height: 54px;
+          @include flexbox();
+          @include align-items(center);
+          border-bottom: 1px solid #D9D9D9;
+          background-image: url('../images/careers/bg-upload.svg');
+          background-repeat: no-repeat;
+          background-position: center right;
+
+          label {
+            @include flexbox();
+
+            span {
+              padding-left: 10px;
+              @include fs(18, 21);
+              color: #111111;
+            }
+          }
+        }
+
+        input[name="file-cv"] {
+          overflow: hidden;
+          opacity: 0;
+          position: absolute;
+          height: 100%;
+          // background-image: url('../images/careers/upload-icon.svg');
+        }
+
+        input[name="candidate"] {
+          background-image: url('../images/careers/user-icon.svg');
+        }
+
+        .select-wrapper {
+          border-bottom: 1px solid #D9D9D9;
+
+          &::before {
+            content: '';
+            width: 25px;
+            background-image: url('../images/careers/work-icon.png');
+            padding-left: 25px;
+            background-repeat: no-repeat;
+            background-position: left bottom 1px;
+          }
+          
+          select {
+            width: calc(100% - 25px);
+            margin-top: 10px;
+            margin-bottom: 5px;
+            @include fs(18, 21);
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-family: 'Roboto', sans-serif;
+            color: #111111;
+            padding-left: 0;
+          }
+        }
+
+        #apply-cv {
+          width: 295px;
+          margin-top: 39px;
+          padding: 25px 55px;
+          border: 5px solid #111111;
+          color: #111111;
+          font-family: sans-serif;
+          font-weight: bold;
+          background: transparent;
+
+          @include bp(tab) {
+            width: 199px;
+          }
+        }
+      }
+
+      .map {
+        width: 55%;
+
+        img {
+          position: relative;
+          top: 140px;
+
+          @include bp(tab) {
+            top: 0;
+          }
+        }
+
+        @include bp(tab) {
+          width: 100%;
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .img-join-us {
+      margin-top: 90px;
+      margin-bottom: 100px;
+
+      @include bp(tab) {
+        margin: 10px 0 100px 0;        
+      }
+    }
+  }
+
+  .required {
+    display: block;
+    color: #ff3860;
+    font-size: .8rem;
+  }
+}

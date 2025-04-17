@@ -1,0 +1,13 @@
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/reset';
+
+// --------------------
+// Components
+// --------------------
+
+// レイアウト全般
+@import 'components/layout';
+@import 'components/header';
+@import 'components/footer';
+

@@ -1,0 +1,145 @@
+html[lang] {
+  scroll-behavior: smooth;
+
+  overflow-x: auto;
+ 
+  @include bp(tab) {
+    margin-top: 0 !important;
+  }
+}
+
+body {
+  position: relative;    
+  font-size: $global-font-size;
+  line-height: 29px;
+  font-family: $font-roboto;
+  @include bp(769px) {
+    min-width: 1000px;
+  }
+}
+
+a {
+  @include transition(0.2s all ease);
+}
+input,
+button {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  @include bp(769px) {
+    padding: 0 10px;
+  }
+  @include bp(tab) {
+    padding: 0 setvw(30px);
+  }
+}
+
+.p-flex,
+.flexbox {
+  @include flexbox;
+}
+
+.main-content {
+  // min-height: 80vh;
+  min-height: 100vh;
+}
+
+/* page heading */
+.p-page-heading {
+  position: relative;
+  width: 100%;
+  height: 784px;
+
+  @include bp(tab) {
+    height: 500px;
+  }
+
+  &_icon-arrow {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    background-image: url(../images/careers/down.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    left: calc(50% - 23px);
+    height: 24px;
+    bottom: 50px;
+    @include flexbox();
+    @include justify-content(center);
+  }
+
+  &_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: url("../images/careers/bg-careers.jpg");
+    background-size: cover;
+    @include bp(tab) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      background: url("../images/careers/bg-careers_mobile.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &_text, &_intro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include fs(96, 160);
+    font-weight: 200;
+    letter-spacing: 9px;
+    text-align: center;
+    color: $color-white;
+    z-index: 2;
+
+    @include bp(tab) {
+      width: 100%;
+      height: 100%;
+      @include align-items(flex-end);
+      padding-bottom: 130px;
+      @include fs(60, 90);
+    }
+  }
+
+  &_intro {
+    @include fs(40);
+    line-height: 1.8;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: normal;
+
+    @include bp(pc) {
+      max-width: 70%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    @include bp(tab) {
+      @include fs(25, 35);
+    }
+
+    @include bp(sp) {
+      @include fs(21, 30);
+    }
+
+    p {
+      font-weight: 200;
+    }
+  }
+}
