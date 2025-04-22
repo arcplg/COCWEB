@@ -1986,3 +1986,147 @@ l-footer style
     margin: 0;
   }
 }
+
+
+/* Footer */
+
+.footer {
+    padding: 60px 0 20px;
+    background-color: #030716;
+}
+.newsletter-container {
+    background: url(../images/bg/bg_newsletter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.newsletter-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.newsletter-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.newsletter-form {
+  background-color: white;
+  border-radius: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 16px;
+  width: 250px;
+}
+
+.newsletter-form button {
+  background-color: #ff3c00;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e23400;
+}
+
+.ft_menu {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+.ft_menu .ft-col {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .ft_menu  .logo {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .ft_menu   .ft-col h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .ft_menu  .ft-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ft_menu  .ft-col ul li {
+    margin-bottom: 10px;
+  }
+  
+  .ft_menu  .ft-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .ft_menu  .ft-col ul li a:hover {
+    color: #fff;
+  }
+  
+  .ft_menu   .ft-col p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .ft_menu  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .ft_menu  .social-icons a {
+    background-color: #000;
+    padding: 6px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .ft_menu  .social-icons img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+.site-info {
+    padding-top: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+}
